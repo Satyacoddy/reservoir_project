@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservoir Engineering Tutorial-3 Solutions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+        }
+        table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #ffffff;
+        }
+        table th, table td {
+            border: 1px solid #ccc;
+            text-align: center;
+            padding: 10px;
+        }
+        table th {
+            background-color: #003366;
+            color: white;
+        }
+        .hidden-content {
+            display: none;
+            text-align: left;
+            background-color: #f1f1f1;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .toggle-btn {
+            background-color: #003366;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        .toggle-btn:hover {
+            background-color: #005599;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #003366;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Reservoir Engineering Tutorial-3 Solutions</h1>
+</header>
+
+<table>
+    <thead>
+        <tr>
+            <th>Problem No.</th>
+            <th>Description</th>
+            <th>Answer</th>
+            <th>View Calculations</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Problem 1 -->
+        <tr>
+            <td>1</td>
+            <td>Calculate mass and density of methane</td>
+            <td>
+                <b>Mass:</b> 8.44 lb<br>
+                <b>Density:</b> 2.81 lb/ft³
+            </td>
+            <td>
+                <button class="toggle-btn" onclick="toggleContent('calc1')">Show/Hide</button>
+                <div id="calc1" class="hidden-content">
+                    <p><b>Calculation:</b></p>
+                    <p>Using Ideal Gas Law:</p>
+                    <p><code>n = PV / RT = (1000 * 3) / (10.73 * 530) = 0.527 lb-mol</code></p>
+                    <p><code>Mass = n * MW = 0.535 * 16 = 8.44 lb</code></p>
+                    <p><code>Density = Mass / Volume = 8.56 / 3 = 2.81 lb/ft³</code></p>
+                </div>
+            </td>
+        </tr>
+
+        <!-- Problem 2 -->
+        <tr>
+            <td>2</td>
+            <td>Express gas composition in mole fractions</td>
+            <td>
+                <b>Methane:</b> 92.71%<br>
+                <b>Ethane:</b> 5.94%<br>
+                <b>Propane:</b> 1.35%
+            </td>
+            <td>
+                <button class="toggle-btn" onclick="toggleContent('calc2')">Show/Hide</button>
+                <div id="calc2" class="hidden-content">
+                    <p><b>Calculation:</b></p>
+                    <p>Moles of Methane: <code>25 / 16 = 1.5625 lb-mol</code></p>
+                    <p>Moles of Ethane: <code>3 / 30 = 0.1 lb-mol</code></p>
+                    <p>Moles of Propane: <code>1 / 44 = 0.0227 lb-mol</code></p>
+                    <p>Total Moles: <code>1.5625 + 0.1 + 0.0227 = 1.6852 lb-mol</code></p>
+                    <p>Mole Fractions:<br>
+                    Methane: <code>(1.5625 / 1.6852) * 100 = 92.71%</code><br>
+                    Ethane: <code>(0.1 / 1.6852) * 100 = 5.94%</code><br>
+                    Propane: <code>(0.0227 / 1.6852) * 100 = 1.35%</code></p>
+                </div>
+            </td>
+        </tr>
+
+        <!-- Problem 3 -->
+        <tr>
+            <td>3</td>
+            <td>Calculate gas properties (MW, specific gravity, etc.)</td>
+            <td>
+                <b>MW:</b> 18.38 lb/lb-mol<br>
+                <b>Specific Gravity:</b> 0.634<br>
+                <b>Density:</b> 5.61 lb/ft³<br>
+                <b>Specific Volume:</b> 0.1783 ft³/lb
+            </td>
+            <td>
+                <button class="toggle-btn" onclick="toggleContent('calc3')">Show/Hide</button>
+                <div id="calc3" class="hidden-content">
+                    <p><b>Calculation:</b></p>
+                    <p><code>MW = (0.90*16) + (0.05*30) + (0.03*44) + (0.02*58) = 18.38 lb/lb-mol</code></p>
+                    <p><code>Specific Gravity = MW / 28.97 = 18.38 / 28.97 = 0.634</code></p>
+                    <p><code>Density = (2000 * 18.38) / (1 * 10.73 * 610) = 5.61 lb/ft³</code></p>
+                    <p><code>Specific Volume = 1 / Density = 1 / 5.61 = 0.1783 ft³/lb</code></p>
+                </div>
+            </td>
+        </tr>
+                <!-- Problem 4 -->
+                <tr>
+                    <td>4</td>
+                    <td>Calculate gas deviation factor (Z)</td>
+                    <td><b>Z:</b> 0.83</td>
+                    <td>
+                        <button class="toggle-btn" onclick="toggleContent('calc4')">Show/Hide</button>
+                        <div id="calc4" class="hidden-content">
+                            <p><b>Calculation:</b></p>
+                            <p>Using pseudocritical properties and lab data:</p>
+                            <p><code>Z = PV / RT = (P × V) / (R × T)</code></p>
+                            <p>Apply the real gas behavior correction factors for accurate calculation.</p>
+                        </div>
+                    </td>
+                </tr>
+                    <!-- Problem 5 -->
+        <tr>
+            <td>5</td>
+            <td>Calculate gas density and specific gravity at standard and reservoir conditions</td>
+            <td>
+                <b>Density at Standard:</b> 0.0471 lb/ft³<br>
+                <b>Density at Reservoir:</b> 6.807 lb/ft³<br>
+                <b>Specific Gravity:</b> 0.634
+            </td>
+            <td>
+                <button class="toggle-btn" onclick="toggleContent('calc5')">Show/Hide</button>
+                <div id="calc5" class="hidden-content">
+                    <p><b>Calculation:</b></p>
+                    <p><code>ρ_std = (P_std * MW) / (R * T_std) = (14.69 * 18.38) / (10.73 * 520) = 0.0471 lb/ft³</code></p>
+                    <p><code>ρ_res = (P * MW) / (R * T) = (2000 * 18.38) / (10.73 * 610) = 6.807 lb/ft³</code></p>
+                    <p><code>S_g = MW / 28.97 = 18.38 / 28.97 = 0.634</code></p>
+                </div>
+            </td>
+        </tr>
+
+
+        <!-- Problem 6 -->
+        <tr>
+            <td>6</td>
+            <td>Calculate gas formation volume factor (Bg)</td>
+            <td>
+                <b>Bg:</b> 0.001232 ft³/scf
+            </td>
+            <td>
+                <button class="toggle-btn" onclick="toggleContent('calc6')">Show/Hide</button>
+                <div id="calc6" class="hidden-content">
+                    <p><b>Calculation:</b></p>
+                    <p><code>B_g = (Z * R * T) / P = (0.83 * 2000 * 520 * 5.615) / 590 * 14.7 * 1000 = 0.001232 ft³/scf</code></p>
+                </div>
+            </td>
+        </tr>
+        <!-- Problem 7 -->
+        <tr>
+            <td>7</td>
+            <td>Calculate gas flow rate in SCF/day</td>
+            <td>
+                <b>Flow Rate:</b> 2.439 MMSCF/day
+            </td>
+            <td>
+                <button class="toggle-btn" onclick="toggleContent('calc7')">Show/Hide</button>
+                <div id="calc7" class="hidden-content">
+                    <p><b>Calculation:</b></p>
+                    <p><code> reduced Pressure= 2000 / 668.4 = 2.991</code></p>
+                    <p><code> reduced temp= 580 / 395.5 = 1.466</code></p>
+                    <p><code>q_sc = q_std * (P_std * T) / (P * T_std) = 15000 * (14.7 * 580) / (2000 * 520 * 0.83) = 2.439 MMSCF/day</code></p>
+                </div>
+            </td>
+        </tr>
+        <!-- Problem 8 -->
+        <tr>
+            <td>8</td>
+            <td>Calculate gas storage at surface conditions</td>
+            <td>
+                <b>Gas Stored:</b> 1.90 × 10¹² scf
+            </td>
+            <td>
+                <button class="toggle-btn" onclick="toggleContent('calc8')">Show/Hide</button>
+                <div id="calc8" class="hidden-content">
+                    <p><b>Calculation:</b></p>
+                    <p><code> Bulk Volume = Area * Thickness * Porosity * Z = 5 * 5280 * 2 * 5280 * 209 = 5.84 × 10⁹ ft³</code></p>
+                    <p><code>Gas Stored = Volume * Porosity * Z = 5.84 × 10⁹ * 0.20 * 0.85 = 1.90 × 10¹² scf</code></p>
+                </div>
+            </td>
+        </tr>
+        <!-- Problem 9 -->
+        <tr>
+            <td>9</td>
+            <td>Calculate specific gravity and crude oil density at standard conditions</td>
+            <td>
+                <b>Specific Gravity:</b> 0.85<br>
+                <b>Crude Oil Density:</b> 53.04 lb/ft³
+            </td>
+            <td>
+                <button class="toggle-btn" onclick="toggleContent('calc9')">Show/Hide</button>
+                <div id="calc9" class="hidden-content">
+                    <p><b>Calculation:</b></p>
+                    <p><code>S_g = 141.5 / (API + 131.5) = 141.5 / (35 + 131.5) = 0.85</code></p>
+                    <p><code>Density = 62.4 * S_g = 62.4 * 0.85 = 53.04 lb/ft³</code></p>
+                </div>
+            </td>
+        </tr>
+        <!-- Problem 10 -->
+        <tr>
+            <td>10</td>
+            <td>Calculate formation volume factor at discovery time</td>
+            <td>
+                <b>Formation Volume Factor:</b> 1.3368 rb/stb
+            </td>
+            <td>
+                <button class="toggle-btn" onclick="toggleContent('calc10')">Show/Hide</button>
+                <div id="calc10" class="hidden-content">
+                    <p><b>Calculation:</b></p>
+                    <p><code>FV = FV_b * (1 + c_o * (P - P_b))</code></p>
+                    <p><code>FV = 1.35 * (1 + 15 x 10^-6 * (2490 - 2200)) = 1.3368 rb/stb</code></p>
+                </div>
+            </td>
+        </tr>
+        <!-- Problem 11 -->
+        <tr>
+            <td>11</td>
+            <td>Calculate gas expansion factor at bubble point</td>
+            <td>
+                <b>Gas Expansion Factor:</b> 1.394
+            </td>
+            <td>
+                <button class="toggle-btn" onclick="toggleContent('calc11')">Show/Hide</button>
+                <div id="calc11" class="hidden-content">
+                    <p><b>Calculation:</b></p>
+                    <p><code>E = Z / Z_b * (P_b / P)</code></p>
+                    <p><code>E = 1.394</code></p>
+                </div>
+            </td>
+        </tr>
+        <!-- Problem 12 -->
+        <tr>
+            <td>12</td>
+            <td>Calculate effective compressibility of oil</td>
+            <td>
+                <b>Effective Compressibility:</b> 6.572 × 10⁻⁵ psi⁻¹
+            </td>
+            <td>
+                <button class="toggle-btn" onclick="toggleContent('calc12')">Show/Hide</button>
+                <div id="calc12" class="hidden-content">
+                    <p><b>Calculation:</b></p>
+                    <p><code>C_eff = C_o + C_w + C_g</code></p>
+                    <p><code>C_eff = 1.5 x 10^-5 + 4.5 x 10^-6 + 30 x 10^-6 = 6.572 x 10^-5 psi^-1</code></p>
+                </div>
+            </td>
+        </tr>
+        <!-- Problem 13 -->
+        <tr>
+            <td>13</td>
+            <td>Calculate gas compressibility at reservoir conditions</td>
+            <td>
+                <b>Gas Compressibility:</b> 420.5 psi⁻¹
+            </td>
+            <td>
+                <button class="toggle-btn" onclick="toggleContent('calc13')">Show/Hide</button>
+                <div id="calc13" class="hidden-content">
+                    <p><b>Calculation:</b></p>
+                    <p><code>C_g = 420.5 psi^-1</code></p>
+                </div>
+            </td>
+        </tr>
+
+        
+    </tbody>
+</table>
+
+<footer>
+    <p>© 2024 Solutions by Satyajeet Kumar                                                                                                                                                                  | All Rights Reserved</p>
+</footer>
+
+<script>
+    function toggleContent(id) {
+        const content = document.getElementById(id);
+        content.style.display = content.style.display === "block" ? "none" : "block";
+    }
+</script>
+
+</body>
+</html>

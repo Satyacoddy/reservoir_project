@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservoir Engineering <Tutorial-1></Tutorial-1>Solutions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+        }
+        table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #ffffff;
+        }
+        table th, table td {
+            border: 1px solid #ccc;
+            text-align: center;
+            padding: 10px;
+        }
+        table th {
+            background-color: #003366;
+            color: white;
+        }
+        .hidden-content {
+            display: none;
+            text-align: left;
+            background-color: #f1f1f1;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .toggle-btn {
+            background-color: #003366;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        .toggle-btn:hover {
+            background-color: #005599;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #003366;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Reservoir Engineering Tutorial-1 Solutions</h1>
+</header>
+
+<table>
+    <thead>
+        <tr>
+            <th>Problem No.</th>
+            <th>Description</th>
+            <th>Answer</th>
+            <th>View Calculations</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Problem 1 -->
+    <tr>
+        <td>1</td>
+        <td>Calculate the porosity of a cylindrical sandstone core</td>
+        <td>
+            <b>Porosity:</b> 7.56%
+        </td>
+        <td>
+            <button class="toggle-btn" onclick="toggleContent('calc1')">Show/Hide</button>
+            <div id="calc1" class="hidden-content">
+                <p><b>Calculation:</b></p>
+                <p><code>V_bulk = π * (D/2)^2 * L = π * (3.5/2)^2 * 7.5 = 72.125 cm³</code></p>
+                <p><code>V_grain = Mass / Grain density = 200 / 3 = 66.67 cm³</code></p>
+                <p><code>Porosity = ((V_bulk - V_grain) / V_bulk) * 100 = ((72.125 - 66.67) / 72.125) * 100 = 7.56%</code></p>
+            </div>
+        </td>
+    </tr>
+    <!-- Problem 2 -->
+    <tr>
+        <td>2</td>
+        <td>Calculate the bulk volume of the core sample</td>
+        <td>
+            <b>Bulk Volume:</b> 9.9 cm³
+        </td>
+        <td>
+            <button class="toggle-btn" onclick="toggleContent('calc2')">Show/Hide</button>
+            <div id="calc2" class="hidden-content">
+                <p><b>Calculation:</b></p>
+                <p><code>V_bulk = Weight_saturated_air - Weight_saturated_water</code></p>
+                <p><code>V_bulk = 22.5 - 12.6 = 9.9 cm³</code></p>
+            </div>
+        </td>
+    </tr>
+    <!-- Problem 3 -->
+    <tr>
+        <td>3</td>
+        <td>Calculate the bulk volume of the core sample using a pycnometer</td>
+        <td>
+            <b>Bulk Volume:</b> 0.435 cm³
+        </td>
+        <td>
+            <button class="toggle-btn" onclick="toggleContent('calc3')">Show/Hide</button>
+            <div id="calc3" class="hidden-content">
+                <p><b>Calculation:</b></p>
+                <p><code>W_displaced = Weight_with_sample - Weight_without_sample</code></p>
+                <p><code>W_displaced = 355.9 - 350.0 = 5.9 g</code></p>
+                <p><code>V_bulk = W_displaced / Density_mercury = 5.9 / 13.546 = 0.435 cm³</code></p>
+            </div>
+        </td>
+    </tr>
+    <!-- Problem 4 -->
+    <tr>
+        <td>4</td>
+        <td>Calculate the porosity and grain density of a cylindrical core sample</td>
+        <td>
+            <b>Porosity:</b> 16.8%<br>
+            <b>Grain Density:</b> 2.91 g/cm³
+        </td>
+        <td>
+            <button class="toggle-btn" onclick="toggleContent('calc4')">Show/Hide</button>
+            <div id="calc4" class="hidden-content">
+                <p><b>Calculation:</b></p>
+                <p><code>V_bulk = π * (D/2)^2 * L = π * (3.8/2)^2 * 10 = 113.39 cm³</code></p>
+                <p><code>Weight_brine = Weight_saturated - Weight_dry = 295 - 275 = 20 g</code></p>
+                <p><code>V_pore = Weight_brine / Brine_density = 20 / 1.05 = 19.05 cm³</code></p>
+                <p><code>Porosity = (V_pore / V_bulk) * 100 = (19.05 / 113.39) * 100 = 16.8%</code></p>
+                <p><code>V_grain = V_bulk - V_pore = 113.39 - 19.05 = 94.34 cm³</code></p>
+                <p><code>Grain Density = Weight_dry / V_grain = 275 / 94.34 = 2.91 g/cm³</code></p>
+            </div>
+        </td>
+    </tr>
+    <!-- Problem 5 -->
+    <tr>
+        <td>5</td>
+        <td>Calculate porosity for a core with given dimensions</td>
+        <td>
+            <b>Porosity:</b> 10%
+        </td>
+        <td>
+            <button class="toggle-btn" onclick="toggleContent('calc5')">Show/Hide</button>
+            <div id="calc5" class="hidden-content">
+                <p><b>Calculation:</b></p>
+                <p><code>V_bulk = L * W * H = 10 * 4 * 4 = 160 cm³</code></p>
+                <p><code>Weight_brine = Weight_saturated - Weight_dry = 300 - 282.4 = 17.6 g</code></p>
+                <p><code>V_pore = Weight_brine / Brine_density = 17.6 / 1.1 = 16 cm³</code></p>
+                <p><code>Porosity = (V_pore / V_bulk) * 100 = (16 / 160) * 100 = 10%</code></p>
+            </div>
+        </td>
+    </tr>
+    <!-- Problem 6 -->
+    <tr>
+        <td>6</td>
+        <td>Determine the porosity of a core sample from brine weight</td>
+        <td>
+            <b>Porosity:</b> 100%
+        </td>
+        <td>
+            <button class="toggle-btn" onclick="toggleContent('calc6')">Show/Hide</button>
+            <div id="calc6" class="hidden-content">
+                <p><b>Calculation:</b></p>
+                <p><code>V_brine = Weight_brine / Density_brine = 172 / 1.04 = 165.38 cm³</code></p>
+                <p><code>Porosity = (V_brine / V_bulk) * 100 = (165.38 / 165.38) * 100 = 100%</code></p>
+            </div>
+        </td>
+    </tr>
+        <!-- Problem 7 -->
+    <tr>
+        <td>7</td>
+        <td>Calculate the porosity of a blended medium</td>
+        <td>
+            <b>Porosity:</b> 21.76%
+        </td>
+        <td>
+            <button class="toggle-btn" onclick="toggleContent('calc7')">Show/Hide</button>
+            <div id="calc7" class="hidden-content">
+                <p><b>Calculation:</b></p>
+                <p><code>Porosity of pebble and sand system:</code></p>
+                <p><code>φ_pebble + sand = φ_pebble × φ_sand = 0.38 × 0.32 = 12.16%</code></p>
+                <p><code>Porosity of sand and fine sand system:</code></p>
+                <p><code>φ_sand + fine sand = φ_sand × φ_fine sand = 0.32 × 0.30 = 9.6%</code></p>
+                <p><code>Total Porosity:</code></p>
+                <p><code>φ_total = φ_pebble + sand + φ_sand + fine sand = 12.16% + 9.6% = 21.76%</code></p>
+            </div>
+        </td>
+    </tr>
+
+    <!-- Problem 8 -->
+    <tr>
+        <td>8</td>
+        <td>Calculate the porosity of a preserved paraffin-coated core sample</td>
+        <td>
+            <b>Porosity:</b> 31.28%
+        </td>
+        <td>
+            <button class="toggle-btn" onclick="toggleContent('calc8')">Show/Hide</button>
+            <div id="calc8" class="hidden-content">
+                <p><b>Calculation:</b></p>
+                <p><code>Volume of Paraffin:</code></p>
+                <p><code>V_paraffin = (W_coated - W_dry) / ρ_paraffin = (20.9 - 20) / 0.9 = 1 cm³</code></p>
+                <p><code>Volume of Bulk:</code></p>
+                <p><code>V_bulk = (W_coated - W_immersed) / ρ_water = (20.9 - 10) / 1 = 10.9 cm³</code></p>
+                <p><code>Volume of Grain Material:</code></p>
+                <p><code>V_grain = W_dry / ρ_grain = 20 / 2.67 = 7.49 cm³</code></p>
+                <p><code>Porosity:</code></p>
+                <p><code>φ = (V_bulk - V_grain) / V_bulk × 100 = (10.9 - 7.49) / 10.9 × 100 = 31.28%</code></p>
+            </div>
+        </td>
+    </tr>
+    <!-- Problem 9 -->
+<tr>
+    <td>9</td>
+    <td>Calculate the arithmetic average and thickness-weighted average of porosity</td>
+    <td>
+        <b>Arithmetic Average:</b> 12.67%<br>
+        <b>Thickness-Weighted Average:</b> 13.20%
+    </td>
+    <td>
+        <button class="toggle-btn" onclick="toggleContent('calc9')">Show/Hide</button>
+        <div id="calc9" class="hidden-content">
+            <p><b>Calculation:</b></p>
+            <p>Given porosity data for samples:</p>
+            <ul>
+                <li>Sample 1: Thickness = 1.0 ft, Porosity = 10%</li>
+                <li>Sample 2: Thickness = 1.5 ft, Porosity = 12%</li>
+                <li>Sample 3: Thickness = 1.2 ft, Porosity = 11%</li>
+                <li>Sample 4: Thickness = 2.0 ft, Porosity = 14%</li>
+                <li>Sample 5: Thickness = 2.1 ft, Porosity = 13%</li>
+                <li>Sample 6: Thickness = 1.1 ft, Porosity = 10%</li>
+            </ul>
+            <p><b>Step 1: Calculate Arithmetic Average</b></p>
+            <p><code>Arithmetic Average = (10 + 12 + 11 + 14 + 13 + 10) / 6 = 12.67%</code></p>
+            <p><b>Step 2: Calculate Thickness-Weighted Average</b></p>
+            <p><code>Thickness-Weighted Average = Σ(Thickness * Porosity) / Σ(Thickness)</code></p>
+            <p><code>Sum of Thickness * Porosity = (1.0*10 + 1.5*12 + 1.2*11 + 2.0*14 + 2.1*13 + 1.1*10) = 78.4</code></p>
+            <p><code>Sum of Thickness = 1.0 + 1.5 + 1.2 + 2.0 + 2.1 + 1.1 = 5.9</code></p>
+            <p><code>Thickness-Weighted Average = 78.4 / 5.9 ≈ 13.20%</code></p>
+        </div>
+    </td>
+</tr>
+
+<!-- Problem 10 -->
+<tr>
+    <td>10</td>
+    <td>Compute the thickness-weighted average porosity of a geological formation</td>
+    <td>
+        <b>Arithmetic Average:</b> 14.67%<br>
+        <b>Thickness-Weighted Average:</b> 15.05%
+    </td>
+    <td>
+        <button class="toggle-btn" onclick="toggleContent('calc10')">Show/Hide</button>
+        <div id="calc10" class="hidden-content">
+            <p><b>Calculation:</b></p>
+            <p>Given porosity data for samples with total thickness of 9 ft:</p>
+            <ul>
+                <li>Sample 1: Thickness = 0.5 ft, Porosity = 10%</li>
+                <li>Sample 2: Thickness = 1.0 ft, Porosity = 12%</li>
+                <li>Sample 3: Thickness = 1.0 ft, Porosity = 14%</li>
+                <li>Sample 4: Thickness = 1.5 ft, Porosity = 16%</li>
+                <li>Sample 5: Thickness = 2.5 ft, Porosity = 18%</li>
+                <li>Sample 6: Thickness = 2.5 ft, Porosity = 20%</li>
+            </ul>
+            <p><b>Step 1: Calculate Arithmetic Average</b></p>
+            <p><code>Arithmetic Average = (10 + 12 + 14 + 16 + 18 + 20) / 6 = 14.67%</code></p>
+            <p><b>Step 2: Calculate Thickness-Weighted Average</b></p>
+            <p><code>Thickness-Weighted Average = Σ(Thickness * Porosity) / Σ(Thickness)</code></p>
+            <p><code>Sum of Thickness * Porosity = (0.5*10 + 1.0*12 + 1.0*14 + 1.5*16 + 2.5*18 + 2.5*20) = 135.4</code></p>
+            <p><code>Sum of Thickness = 0.5 + 1.0 + 1.0 + 1.5 + 2.5 + 2.5 = 9.0</code></p>
+            <p><code>Thickness-Weighted Average = 135.4 / 9.0 ≈ 15.05%</code></p>
+        </div>
+    </td>
+</tr>
+
+<!-- Problem 11 -->
+<tr>
+    <td>11</td>
+    <td>Calculate the absolute permeability of a core plug using a brine solution</td>
+    <td>
+        <b>Permeability:</b> 113.04 mD
+    </td>
+    <td>
+        <button class="toggle-btn" onclick="toggleContent('calc11')">Show/Hide</button>
+        <div id="calc11" class="hidden-content">
+            <p><b>Calculation:</b></p>
+            <p>Using Darcy's Law for brine flow:</p>
+            <p><code>k = (Q * μ * L) / (A * ΔP)</code></p>
+            <p>Given:</p>
+            <ul>
+                <li>Viscosity of brine, μ = 1.2 cp</li>
+                <li>Flow rate, Q = 0.8 cm³/sec</li>
+                <li>Length of core, L = 5 cm</li>
+                <li>Cross-sectional area, A = 6 cm²</li>
+                <li>Pressure difference, ΔP = 4.0 atm</li>
+            </ul>
+            <p>Substitute values into the formula:</p>
+            <p><code>k = (0.8 * 1.2 * 5) / (6 * 4.0) = 113.04 mD</code></p>
+        </div>
+    </td>
+</tr>
+
+<!-- Problem 12 -->
+<tr>
+    <td>12</td>
+    <td>Calculate the permeability of the cylindrical core sample based on the flow of air</td>
+    <td>
+        <b>Permeability:</b> 10.97 mD
+    </td>
+    <td>
+        <button class="toggle-btn" onclick="toggleContent('calc12')">Show/Hide</button>
+        <div id="calc12" class="hidden-content">
+            <p><b>Calculation:</b></p>
+            <p>Using Darcy's Law for gas flow:</p>
+            <p><code>k = (Q * μ * L) / (A * ΔP)</code></p>
+            <p>Given:</p>
+            <ul>
+                <li>Air flow rate, Q = 30 cm³/sec</li>
+                <li>Length of core, L = 20 in = 50.8 cm</li>
+                <li>Diameter of core, D = 2.4 in = 6.096 cm</li>
+                <li>Initial pressure = 24.7 psia</li>
+                <li>Outlet pressure = 14.7 psia</li>
+                <li>Viscosity of air = 0.0198 cp</li>
+            </ul>
+            <p>Calculate cross-sectional area, A:</p>
+            <p><code>A = π * (D/2)² = π * (6.096/2)² ≈ 29.19 cm²</code></p>
+            <p>Pressure difference, ΔP = 24.7 - 14.7 = 10 psi</p>
+            <p>Substitute values into the formula:</p>
+            <p><code>k = (30 * 0.0198 * 50.8) / (29.19 * 10) ≈ 10.97 mD</code></p>
+        </div>
+    </td>
+</tr>
+
+<!-- Problem 13 -->
+<tr>
+    <td>13</td>
+    <td>Compute the permeability of a core using routine permeability test data</td>
+    <td>
+        <b>Permeability:</b> 4.58 mD
+    </td>
+    <td>
+        <button class="toggle-btn" onclick="toggleContent('calc13')">Show/Hide</button>
+        <div id="calc13" class="hidden-content">
+            <p><b>Calculation:</b></p>
+            <p>Using Darcy's Law for steady-state fluid flow:</p>
+            <p><code>k = (Q * μ * L) / (A * ΔP)</code></p>
+            <p>Given:</p>
+            <ul>
+                <li>Flow rate of air, Q = 1000 cc of air at 1 atm and 70°F in 500 sec</li>
+                <li>Viscosity of air, μ = 0.02 centipoise</li>
+                <li>Length of core, L = 2 cm</li>
+                <li>Cross-sectional area of core, A = 2.0 cm²</li>
+                <li>Pressure difference, ΔP = 1.45 - 1.00 = 0.45 atm</li>
+            </ul>
+            <p>Convert flow rate to cm³/sec:</p>
+            <p><code>Q = 1000 cm³ / 500 sec = 2 cm³/sec</code></p>
+            <p>Substitute values into the formula:</p>
+            <p><code>k = (2 * 0.02 * 2) / (2.0 * 0.45) ≈ 4.58 mD</code></p>
+        </div>
+    </td>
+</tr>
+
+<!-- Problem 14 -->
+<tr>
+    <td>14</td>
+    <td>Calculate the linear flow of oil through a porous medium</td>
+    <td>
+        <b>Permeability:</b> 11.14 mD
+    </td>
+    <td>
+        <button class="toggle-btn" onclick="toggleContent('calc14')">Show/Hide</button>
+        <div id="calc14" class="hidden-content">
+            <p><b>Calculation:</b></p>
+            <p>Using Darcy's Law for linear flow of oil:</p>
+            <p><code>k = (Q * μ * L) / (A * ΔP)</code></p>
+            <p>Given:</p>
+            <ul>
+                <li>Flow rate, Q = 27 bbl/day</li>
+                <li>Viscosity of oil, μ = 2.5 cp</li>
+                <li>Cross-sectional area, A = 800 ft²</li>
+                <li>Pressure drop, ΔP = 150 psi</li>
+                <li>Length of porous medium, L = 200 ft</li>
+            </ul>
+            <p>Convert flow rate to consistent units:</p>
+            <p><code>Q = 27 bbl/day * (5.615 ft³/bbl) / (24 * 3600 sec) = 0.0026 ft³/sec</code></p>
+            <p>Substitute values into the formula:</p>
+            <p><code>k = (0.0026 * 2.5 * 200) / (800 * 150) ≈ 11.14 mD</code></p>
+        </div>
+    </td>
+</tr>
+
+
+
+<!-- Problem 15 -->
+<tr>
+    <td>15</td>
+    <td>Calculate the absolute permeability for an oil well in a reservoir</td>
+    <td>
+        <b>Permeability:</b> 4.002 mD
+    </td>
+    <td>
+        <button class="toggle-btn" onclick="toggleContent('calc15')">Show/Hide</button>
+        <div id="calc15" class="hidden-content">
+            <p><b>Calculation:</b></p>
+            <p>Using the formula for steady-state radial flow:</p>
+            <p><code>k = 162.6 * Q * μ * ln(r_e / r_w) / (h * (P_i² - P_wf²))</code></p>
+            <p>Given:</p>
+            <ul>
+                <li>Q = 500 rb/day</li>
+                <li>μ = 3.5 cp</li>
+                <li>r_w = 0.583 ft</li>
+                <li>r_e = 700 ft</li>
+                <li>h = 10 ft</li>
+                <li>P_i = 3000 psi</li>
+                <li>P_wf = 2000 psi</li>
+            </ul>
+            <p><code>ln(r_e / r_w) = ln(700 / 0.583) = ln(1200) ≈ 7.090</code></p>
+            <p><code>k = (162.6 * 500 * 3.5 * 7.090) / (10 * (3000² - 2000²))</code></p>
+            <p><code>Pressure Difference = 3000² - 2000² = 5,000,000 psi²</code></p>
+            <p><code>k = (200,079.9) / 5,000,000 = 4.002 mD</code></p>
+        </div>
+    </td>
+</tr>
+
+<!-- Problem 16 -->
+<tr>
+    <td>16</td>
+    <td>Calculate permeability for an oil well using flow rate data</td>
+    <td>
+        <b>Permeability:</b> 9.45 mD
+    </td>
+    <td>
+        <button class="toggle-btn" onclick="toggleContent('calc16')">Show/Hide</button>
+        <div id="calc16" class="hidden-content">
+            <p><b>Calculation:</b></p>
+            <p>Using the formula for radial flow in SI units:</p>
+            <p><code>k = 0.00708 * Q * μ * ln(r_e / r_w) / (h * (P_i - P_wf))</code></p>
+            <p>Given:</p>
+            <ul>
+                <li>Q = 150 cm³/sec</li>
+                <li>μ = 2.5 cp</li>
+                <li>r_w = 0.2 m</li>
+                <li>r_e = 350 m</li>
+                <li>h = 0.3 m</li>
+                <li>P_i = 2200 psi</li>
+                <li>P_wf = 1500 psi</li>
+            </ul>
+            <p><code>ln(r_e / r_w) = ln(350 / 0.2) = ln(1750) ≈ 7.466</code></p>
+            <p><code>k = (0.00708 * 150 * 2.5 * 7.466) / (0.3 * (2200 - 1500))</code></p>
+            <p><code>Pressure Difference = 2200 - 1500 = 700 psi</code></p>
+            <p><code>k = (1.985) / 210 = 0.00945 Darcy = 9.45 mD</code></p>
+        </div>
+    </td>
+</tr>
+
+
+        
+    </tbody>
+</table>
+
+<footer>
+    <p>© 2024 Solutions by Satyajeet Kumar                                                                                                                                                                  | All Rights Reserved</p>
+</footer>
+
+<script>
+    function toggleContent(id) {
+        const content = document.getElementById(id);
+        content.style.display = content.style.display === "block" ? "none" : "block";
+    }
+</script>
+
+</body>
+</html>

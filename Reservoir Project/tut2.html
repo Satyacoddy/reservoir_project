@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservoir Engineering Tutorial-2 Solutions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+        }
+        table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #ffffff;
+        }
+        table th, table td {
+            border: 1px solid #ccc;
+            text-align: center;
+            padding: 10px;
+        }
+        table th {
+            background-color: #003366;
+            color: white;
+        }
+        .hidden-content {
+            display: none;
+            text-align: left;
+            background-color: #f1f1f1;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .toggle-btn {
+            background-color: #003366;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        .toggle-btn:hover {
+            background-color: #005599;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #003366;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Reservoir Engineering Tutorial-2 Solutions</h1>
+</header>
+
+<table>
+    <thead>
+        <tr>
+            <th>Problem No.</th>
+            <th>Description</th>
+            <th>Answer</th>
+            <th>View Calculations</th>
+        </tr>
+    </thead>
+    <tbody>
+<!-- Problem 1 -->
+<tr>
+    <td>1</td>
+    <td>Calculate the pore volume of the core</td>
+    <td>
+        <b>Pore Volume:</b> 2.83 cc
+    </td>
+    <td>
+        <button class="toggle-btn" onclick="toggleContent('calc1')">Show/Hide</button>
+        <div id="calc1" class="hidden-content">
+            <p><b>Calculation:</b></p>
+            <p>The formula for the pore volume (PV) is given by:</p>
+            <p><code>PV = π * r² * h * (Φ / 100)</code></p>
+            <p>Given: Radius (r) = 1.27 in, Height (h) = 2.54 in, Porosity (Φ) = 22%</p>
+            <p><code>PV = 3.1416 * (1.27)² * 2.54 * (22 / 100) ≈ 2.83cc</code></p>
+        </div>
+    </td>
+</tr>
+
+<!-- Problem 2 -->
+<tr>
+    <td>2</td>
+    <td>Calculate oil and water saturations of the core</td>
+    <td>
+        <b>Oil Saturation:</b> 80%<br>
+        <b>Water Saturation:</b> 20%
+    </td>
+    <td>
+        <button class="toggle-btn" onclick="toggleContent('calc2')">Show/Hide</button>
+        <div id="calc2" class="hidden-content">
+            <p><b>Calculation:</b></p>
+            <p>Given: Oil and water saturations are based on the provided data:</p>
+            <p><code>So = 80%, Sw = 20%</code></p>
+            <p>Since the core is fully saturated, the sum of oil and water saturations equals 100%. Thus, the values are directly provided in the problem.</p>
+        </div>
+    </td>
+</tr>
+
+<!-- Problem 3 -->
+<tr>
+    <td>3</td>
+    <td>Calculate the pressure difference, capillary pressure, and capillary rise</td>
+    <td>
+        <b>Pressure Difference:</b> 72 psi<br>
+        <b>Capillary Pressure:</b> 5.8 psi<br>
+        <b>Capillary Rise:</b> 1.12 in
+    </td>
+    <td>
+        <button class="toggle-btn" onclick="toggleContent('calc3')">Show/Hide</button>
+        <div id="calc3" class="hidden-content">
+            <p><b>Calculation:</b></p>
+            <p>Given: Capillary pressure formula:</p>
+            <p><code>Pc = 2 * σ * cosθ / r</code></p>
+            <p>Where: σ = 32 dyne/cm, θ = 30°, r = 10⁻⁴ cm</p>
+            <p><code>Pc = 2 * 32 * cos(30°) / 10⁻⁴ ≈ 5.8 psi</code></p>
+            <p>Using the equation for pressure difference:</p>
+            <p><code>ΔP = Pc = 72 psi</code></p>
+            <p>The capillary rise is calculated using the formula:</p>
+            <p><code>h = 2 * σ * cosθ / (ρ * g * r)</code></p>
+            <p>For water, ρ = 1 gm/cm³, g = 980 cm/s², r = 10⁻⁴ cm, and σ = 32 dyne/cm.</p>
+            <p><code>h = (2 * 32 * cos30°) / (1 * 980 * 10⁻⁴) ≈ 1.12 in</code></p>
+        </div>
+    </td>
+</tr>
+
+<!-- Problem 4 -->
+<tr>
+    <td>4</td>
+    <td>Calculate the radius of the tube used for capillary pressure calculation</td>
+    <td>
+        <b>Radius of Tube:</b> 10⁻⁵ cm
+    </td>
+    <td>
+        <button class="toggle-btn" onclick="toggleContent('calc4')">Show/Hide</button>
+        <div id="calc4" class="hidden-content">
+            <p><b>Calculation:</b></p>
+            <p>Given: Interfacial tension = 32 dyne/cm, capillary pressure = 5.8 psi, and contact angle = 30°.</p>
+            <p>Using the formula for capillary pressure:</p>
+            <p><code>Pc = 2 * σ * cosθ / r</code></p>
+            <p>Rearrange to solve for r:</p>
+            <p><code>r = 2 * σ * cosθ / Pc</code></p>
+            <p><code>r = 2 * 32 * cos(30°) / 5.8 ≈ 10⁻⁵ cm</code></p>
+        </div>
+    </td>
+</tr>
+
+<!-- Problem 5 -->
+<tr>
+    <td>5</td>
+    <td>Calculate the height of the transition zone at Sw = 0.7</td>
+    <td>
+        <b>Height of Transition Zone:</b> 2.42 ft
+    </td>
+    <td>
+        <button class="toggle-btn" onclick="toggleContent('calc5')">Show/Hide</button>
+        <div id="calc5" class="hidden-content">
+            <p><b>Calculation:</b></p>
+            <p>Given: Displacement pressure (Pc) = 7.5 psi, Sw = 0.7, and fluid properties as specified.</p>
+            <p>Using the height of the transition zone formula:</p>
+            <p><code>H = (Pc / (ρ * g)) * (Sw / (1 - Sw))</code></p>
+            <p><code>H = (7.5 / (51.5 * 62.4)) * (0.7 / (1 - 0.7)) ≈ 2.42 ft</code></p>
+        </div>
+    </td>
+</tr>
+<!-- Problem 6 -->
+<tr>
+    <td>6</td>
+    <td>Calculate mercury injection test parameters</td>
+    <td>
+        <b>Porosity:</b> 0.2<br>
+        <b>Formation Volume Factor (B₀):</b> 1.2 res-bbl/STB<br>
+        <b>Drainage Area:</b> 620,640 bbl (80 acres)<br>
+    </td>
+    <td>
+        <button class="toggle-btn" onclick="toggleContent('calc6')">Show/Hide</button>
+        <div id="calc6" class="hidden-content">
+            <p><b>Calculation:</b></p>
+            <p><b>Formation Volume Factor (B₀):</b> Directly provided as 1.2 res-bbl/STB.</p>
+            <p><b>Drainage Area:</b> 80 acres × 7758 bbl/acre = 620,640 bbl.</p>
+            <p><b>Porosity:</b> 0.2 (20%)</p>
+            <p><b>Specific Gravity (SG):</b> 1.1 for oil.</p>
+            <p><b>Mercury Injection Test:</b> The calculation for mercury injection parameters would involve fluid interactions, hydrostatic gradient, and contact angles, which are given but require more details from the test to proceed further.</p>
+        </div>
+    </td>
+</tr>
+<!-- Problem 7 -->
+<tr>
+    <td>7</td>
+    <td>Calculate connate water saturation, depth to FWL, transition zone thickness, and depth to 50% water saturation.</td>
+    <td>
+        <b>Connate Water Saturation (S<sub>wc</sub>):</b> 42.9%<br>
+        <b>Depth to Free Water Level (FWL):</b> 5023.17 ft<br>
+        <b>Transition Zone Thickness:</b> 0.224 ft<br>
+        <b>Depth to 50% Water Saturation:</b> 5023.39 ft
+    </td>
+    <td>
+        <button class="toggle-btn" onclick="toggleContent('calc7')">Show/Hide</button>
+        <div id="calc7" class="hidden-content">
+            <p><b>Calculation:</b></p>
+            <p><code>S<sub>wc</sub> = P<sub>d</sub> / P<sub>c</sub> = 1.5 / 3.5 = 0.429 (or 42.9%)</code></p>
+            <p><code>Hydrostatic Gradient = 0.433 × (ρ<sub>w</sub> - ρ<sub>o</sub>) = 0.433 × (64.1 - 43.5) = 8.922 psi/ft</code></p>
+            <p><code>Depth to FWL = Depth to WOC + P<sub>d</sub> / Hydrostatic Gradient = 5023 + 1.5 / 8.922 = 5023.17 ft</code></p>
+            <p><code>Transition Zone Thickness = (P<sub>c</sub> - P<sub>d</sub>) / Hydrostatic Gradient = (3.5 - 1.5) / 8.922 = 0.224 ft</code></p>
+            <p><code>Depth to 50% Sw = Depth to WOC + P<sub>c</sub> / Hydrostatic Gradient = 5023 + 3.5 / 8.922 = 5023.39 ft</code></p>
+        </div>
+    </td>
+</tr>
+
+<!-- Problem 8 -->
+<tr>
+    <td>8</td>
+    <td>Calculate the Leverett J-function.</td>
+    <td>
+        <b>Leverett J-Function:</b> 268,577
+    </td>
+    <td>
+        <button class="toggle-btn" onclick="toggleContent('calc8')">Show/Hide</button>
+        <div id="calc8" class="hidden-content">
+            <p><b>Calculation:</b></p>
+            <p><code>Convert P<sub>c</sub> to dynes/cm²: P<sub>c</sub> = 6.5 psi × 68947.6 = 448159.4 dynes/cm²</code></p>
+            <p><code>cos(θ) = cos(45°) = 0.707</code></p>
+            <p><code>J = P<sub>c</sub> × √(k / φ) / (σ × cos(θ))</code></p>
+            <p><code>J = 448159.4 × √(80 / 0.22) / (45 × 0.707) ≈ 268,577</code></p>
+        </div>
+    </td>
+</tr>
+
+<!-- Problem 9 -->
+<tr>
+    <td>9</td>
+    <td>Calculate the Leverett J-function for given P<sub>c</sub> values and water saturations.</td>
+    <td>
+        <b>J-Function (P<sub>c</sub> = 6 psi):</b> 5,760,456<br>
+        <b>J-Function (P<sub>c</sub> = 12 psi):</b> 11,520,912<br>
+        <b>J-Function (P<sub>c</sub> = 25 psi):</b> 24,000,950
+    </td>
+    <td>
+        <button class="toggle-btn" onclick="toggleContent('calc9')">Show/Hide</button>
+        <div id="calc9" class="hidden-content">
+            <p><b>Calculation:</b></p>
+            <p><code>Convert P<sub>c</sub> to dynes/cm²: P<sub>c</sub> = P<sub>c</sub> (psi) × 68947.6</code></p>
+            <p><code>cos(θ) = cos(30°) = 0.866</code></p>
+            <p><code>J = P<sub>c</sub> × √(k / φ) / (σ × cos(θ))</code></p>
+            <p><code>For P<sub>c</sub> = 6 psi: J = 6 × 68947.6 × √(150 / 0.2) / (45 × 0.866) ≈ 5,760,456</code></p>
+            <p><code>For P<sub>c</sub> = 12 psi: J = 12 × 68947.6 × √(150 / 0.2) / (45 × 0.866) ≈ 11,520,912</code></p>
+            <p><code>For P<sub>c</sub> = 25 psi: J = 25 × 68947.6 × √(150 / 0.2) / (45 × 0.866) ≈ 24,000,950</code></p>
+        </div>
+    </td>
+</tr>
+
+
+        
+    </tbody>
+</table>
+
+<footer>
+    <p>© 2024 Solutions by Satyajeet Kumar                                                                                                                                                                  | All Rights Reserved</p>
+</footer>
+
+<script>
+    function toggleContent(id) {
+        const content = document.getElementById(id);
+        content.style.display = content.style.display === "block" ? "none" : "block";
+    }
+</script>
+
+</body>
+</html>
